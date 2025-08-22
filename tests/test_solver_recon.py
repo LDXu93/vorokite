@@ -17,7 +17,7 @@ def test_voronoi_recon_outputs_shapes_and_bounds():
     n = nodes.shape[0]
     assert all(0 <= a < n and 0 <= b < n and a != b for a,b in edges)
 
-    assert top.size > 0 and bot.size > 0
+    assert top[0].size > 0 and bot[0].size > 0
 
 def test_neighbors_and_metrics_are_finite():
     s = Solver(_make_centers(), bc="Periodic")
