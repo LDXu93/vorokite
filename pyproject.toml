@@ -1,0 +1,22 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "vorokite"
+version = "0.1.0"
+description = "Lightweight Voronoi-style center generators and utilities (public)."
+readme = "README.md"
+requires-python = ">=3.9"
+license = { text = "MIT" }
+authors = [{ name = "Leidong Xu" }]
+dependencies = ["numpy>=1.22", "scipy>=1.9", "shapely>=2.0"]
+
+[project.optional-dependencies]
+plots = ["matplotlib>=3.6"]
+
+[project.urls]
+Homepage = "https://github.com/your-org/vorokite"
+
+[tool.setuptools]
+packages = ["vorokite"]  # because you’re using a flat layout
