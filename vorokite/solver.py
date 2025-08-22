@@ -132,7 +132,8 @@ class Solver:
 
         center = self.vor.points.mean(axis=0)
         if radius is None:
-            radius = self.vor.points.ptp().max() * 2.0
+            radius = np.ptp(self.vor.points, axis=0).max() * 2.0 # ndarray.ptp() removed in numpy 2.....
+
 
         # Map of ridges incident to each input point index
         all_ridges = {}
