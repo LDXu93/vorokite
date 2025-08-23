@@ -263,6 +263,10 @@ class Solver:
             ax.set_xlim(min_x, max_x)
             ax.set_ylim(min_y, max_y)
             ax.margins(0, 0)
+            # create parent folder
+            parent = os.path.dirname(fig_name)
+            if parent:
+                os.makedirs(parent, exist_ok=True)   # <-- add this
             fig.savefig(fig_name, bbox_inches="tight", pad_inches=0)
             plt.close(fig)
 
